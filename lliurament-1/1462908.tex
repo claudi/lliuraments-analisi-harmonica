@@ -1,0 +1,275 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\uppi}{\pi}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\Abs}[1]{\left\lvert{#1}\right\rvert}
+
+\title{Primer lliurament}
+\author{Claudi Lleyda Moltó -- 1462908}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item[\textbf{1.}] Sigui~\(f\) una funció~\(2\uppi\)-periòdica, integrable
+        Riemann sobre~\(\mathbb{R}\).
+        \begin{enumerate}
+            \item[\textbf{(a)}] Demostreu que la sèrie de Fourier de la
+                funció~\(f\) es pot escriure com
+                \[
+                    f(\theta) \sim \widehat{f}(0) +
+                    \sum_{n\geq1} \bigl[\widehat{f}(n) + \widehat{f}(-n)\bigr]
+                    \cos(n\theta)
+                    +
+                    \iu\bigl[\widehat{f}(n)-\widehat{f}(-n)\bigr]\sin(n\theta).
+                \]
+        \end{enumerate}
+\end{enumerate}
+Sabem que podem escriure la sèrie de Fourier de~\(f\) com
+\begin{align*}
+    Sf(\theta) &= \sum_{n} \widehat{f}(n) \e^{\iu n\theta} \\
+                 &= \widehat{f}(0)
+                 + \sum_{n\geq1} \widehat{f}(n) \e^{\iu n\theta}
+                 + \sum_{n\leq1} \widehat{f}(n) \e^{\iu n\theta}
+                 \\
+                 &= \widehat{f}(0)
+                 + \sum_{n\geq1} \widehat{f}(n) \e^{\iu n\theta}
+                 + \sum_{n\geq1} \widehat{f}(-n) \e^{-\iu n\theta} \\
+                 &= \widehat{f}(0)
+                 + \sum_{n\geq1} \widehat{f}(n)
+                 \bigl[\cos(n\theta) + \iu\sin(n\theta)\bigr]
+                 + \sum_{n\geq1} \widehat{f}(-n)
+                 \bigl[\cos(n\theta) - \iu\sin(n\theta)\bigr] \\
+                 &= \widehat{f}(0)
+                 + \sum_{n\geq1}
+                 \bigl[\widehat{f}(n)+\widehat{f}(-n)\bigr]\cos(n\theta)
+                 + \iu\bigl[\widehat{f}(n)-\widehat{f}(-n)\bigr]\sin(n\theta)
+\end{align*}
+com volíem veure.
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(b)}] Demostreu que si~\(f\) és parell,
+            aleshores~\(\widehat{f}(n) = \widehat{f}(-n)\), i obtenim una sèrie
+            de cosinus.
+    \end{enumerate}
+\end{enumerate}
+Si~\(f\) és parell tenim, amb el canvi de variable~\(\theta = -\tau\), que
+\begin{align*}
+    \widehat{f}(n) &= \frac{1}{2\uppi}
+                      \int_{-\uppi}^{\uppi}f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{-1}{2\uppi}
+                      \int_{\uppi}^{-\uppi}f(-\tau)\e^{\iu n\tau}\diff
+                      \tau \\
+                   &= \frac{1}{2\uppi}
+                      \int_{-\uppi}^{\uppi}f(-\tau)\e^{-\iu(-n)\tau}\diff
+                      \tau \\
+                   &= \widehat{f}(-n),
+\end{align*}
+i per tant~\(\widehat{f}(n) = \widehat{f}(-n)\), i de la fórmula que hem
+demostrat a l'apartat anterior trobem que
+\[
+    Sf(\theta) = \widehat{f}(0) + 2\sum_{n\geq1}\widehat{f}(n)\cos(n\theta).
+\]
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(c)}] Demostreu que si~\(f\) és senar,
+            aleshores~\(\widehat{f}(n) = -\widehat{f}(-n)\), i obtenim una sèrie
+            de sinus.
+    \end{enumerate}
+\end{enumerate}
+Si~\(f\) és senar tenim, amb el canvi de variable~\(\theta = -\tau\), que
+\begin{align*}
+    \widehat{f}(n) &= \frac{1}{2\uppi}
+                      \int_{-\uppi}^{\uppi}f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{-1}{2\uppi}
+                      \int_{\uppi}^{-\uppi}f(-\tau)\e^{\iu n\tau}\diff
+                      \tau \\
+                   &= \frac{-1}{2\uppi}
+                      \int_{-\uppi}^{\uppi}f(\tau)\e^{-\iu(-n)\tau}\diff
+                      \tau \\
+                   &= -\widehat{f}(-n),
+\end{align*}
+i per tant~\(\widehat{f}(n) = -\widehat{f}(-n)\), i de la fórmula que hem
+demostrat a l'apartat \textbf{(a)} trobem que
+\[
+    Sf(\theta) = 2\iu\sum_{n\geq1}\widehat{f}(n)\sin(n\theta).
+\]
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(d)}] Suposem que~\(f(\theta + \uppi) = f(\theta)\) per a
+            tot~\(\theta\in\mathbb{R}\). Demostreu que~\(\widehat{f}(n) = 0\)
+            per tot~\(n\) senar.
+    \end{enumerate}
+\end{enumerate}
+Si~\(f\) satisfà~\(f(\theta + \uppi) = f(\theta)\) trobem que
+\begin{align*}
+    \widehat{f}(n) &= \frac{1}{2\uppi}
+                      \int_{-\uppi}^{\uppi} f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{-\uppi}^{0} f(\theta)\e^{-\iu n\theta}\diff
+                      \theta + \frac{1}{2\uppi}
+                      \int_{0}^{\uppi} f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi} f(\theta-\uppi)
+                      \e^{-\iu n(\theta-\uppi)}\diff
+                      \theta + \frac{1}{2\uppi}
+                      \int_{0}^{\uppi} f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi} f(\theta)
+                      \e^{-\iu n\theta}
+                      \e^{\iu n\uppi}
+                      \diff\theta + \frac{1}{2\uppi}
+                      \int_{0}^{\uppi} f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi}
+                      f(\theta)
+                      \e^{-\iu n\theta}
+                      \e^{\iu n\uppi}
+                      + f(\theta)\e^{-\iu n\theta}\diff
+                      \theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi}
+                      f(\theta)\bigl(1 + \e^{\iu n\uppi}\bigr)
+                      \e^{-\iu n\theta}
+                      \diff\theta \\
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi}
+                      f(\theta)\bigl(1 + (-1)^{n}\bigr)
+                      \e^{-\iu n\theta}
+                      \diff\theta \\
+                      \intertext{i quan~\(n\) és senar}
+                   &= \frac{1}{2\uppi}
+                      \int_{0}^{\uppi}
+                      f(\theta)\bigl(1 - 1\bigr)
+                      \e^{-\iu n\theta}
+                      \diff\theta = 0,
+\end{align*}
+com volíem veure.
+
+\clearpage
+\begin{enumerate}
+    \item[\textbf{2.}] A l'interval~\([-\uppi, \uppi]\) considereu la funció
+        \[
+            f(\theta) =
+            \begin{cases}
+                0 & \text{si } \abs{\theta} > \delta, \\
+                1 - \abs{\theta}/\delta & \text{si } \abs{\theta} \leq \delta.
+            \end{cases}
+        \]
+        Proveu que
+        \[
+            f(\theta) = \frac{\delta}{2\uppi}
+            + 2 \sum_{n = 1}^{\infty}
+            \frac{1-\cos(n\delta)}{n^{2}\uppi\delta} \cos(n\theta).
+        \]
+\end{enumerate}
+Podem estendre~\(f\) a una funció~\(2\uppi\)-periòdica sobre
+tot~\(\mathbb{R}\).
+Denotem aquesta extensió per~\(f\), fent un abús de notació.
+
+Calculem, per~\(n = 0\) trobem
+\[
+    \widehat{f}(0) = \frac{1}{2\uppi}
+                     \int_{-\uppi}^{\uppi}f(\theta)\diff\theta
+                   = \int_{-\delta}^{\delta}
+                     \biggl(1 - \frac{\abs{\theta}}{\delta}\biggr)
+                     \diff\delta
+                   = \frac{\delta}{2\uppi}
+\]
+i per~\(n \neq 0\),
+\begin{align*}
+    \widehat{f}(n) &= \frac{1}{2\uppi} \int_{-\uppi}^{\uppi}
+                      f(\theta) \e^{-\iu n\theta}
+                      \diff \theta \\
+                   &= \frac{1}{2\uppi} \int_{-\delta}^{\delta}
+                      \bigl(1 - \abs{\theta}/\delta\bigr)
+                      \e^{\iu n\theta}
+                      \diff \theta \\
+                   &= \frac{1}{2\uppi} \int_{-\delta}^{\delta}
+                      \e^{\iu n\theta}
+                      \diff \theta
+                      - \frac{1}{2\uppi} \int_{-\delta}^{\delta}
+                      \frac{\abs{\theta}}{\delta} \e^{\iu n\theta}
+                      \diff \theta \\
+                   &= \frac{\sin(n\delta)}{n\uppi}
+                      - \frac{\cos(n\delta) - 1}{n^{2}\uppi\delta}
+                      - \frac{\sin(n\delta)}{n\uppi} \\
+                   &= \frac{1 - \cos(n\delta)}{n^{2}\uppi\delta}
+\end{align*}
+
+Observem que~\(f\) és parell. Per tant podem aplicar l'apartat~\(\textbf{(b)}\)
+de l'exercici~\(\textbf{1.}\), i trobem doncs que la sèrie de Fourier de~\(f\)
+és
+\[
+    Sf(\theta) = \frac{\delta}{2\uppi}
+    + 2 \sum_{n = 1}^{\infty}
+    \frac{1-\cos(n\delta)}{n^{2}\uppi\delta} \cos(n\theta).
+\]
+
+Per acabar, veiem que la sèrie de Fourier que hem trobat convergeix uniformement
+a~\(f\). Observem que
+\[
+    \sum_{n=-\infty}^{\infty}\abs{\widehat{f}(n)}
+    = \frac{\delta}{2\uppi} + \sum_{\substack{n=-\infty\\n\neq0}}^{\infty}
+    \Abs{\frac{1 - \cos(n\delta)}{n^{2}\uppi\delta}}
+    \sim \sum_{\substack{n=-\infty\\n\neq0}}^{\infty} \Abs{\frac{1}{n^{2}}}
+    < \infty
+\]
+i per tant~\(Sf(\theta)\) convergeix uniformement a~\(f\), i tenim el que
+volíem.
+
+\clearpage
+\begin{enumerate}
+    \item[\textbf{3.}] Suposeu que~\(f\) és una funció periòdica de
+        període~\(2\uppi\) que pertany a~\(\mathcal{C}^{k}\). Demostreu que
+        \[
+            \widehat{f}(n) = \mathrm{O}(1/\abs{n}^{k})
+            \qquad\text{quan }
+            \abs{n}\to\infty
+        \]
+\end{enumerate}
+A classe hem vist la igualtat
+\[
+    \widehat{f'}(n) = 2\uppi\iu n\widehat{f}(n)
+\]
+i per tant podem veure que per a tota~\(m\leq k\) es satisfà
+\[
+    \widehat{f^{m)}}(n) = (2\uppi\iu n)^{m}\widehat{f}(n),
+\]
+d'on deduïm que
+\begin{align*}
+    \widehat{f}(n) &= \frac{\widehat{f^{k)}}(n)}{(2\uppi\iu n)^{k}} \\
+                   &= \frac{\widehat{f^{k)}}(n)}{(2\uppi\iu)^{k}}
+                      \frac{1}{n^{k}} \\
+                   &\leq \frac{\widehat{f^{k)}}(n)}{(2\uppi)^{k}}
+                      \frac{1}{\abs{n}^{k}}
+\end{align*}
+Pel lema de Riemann-Lebesgue tenim que~\(\widehat{f^{k)}}(n) \to 0\)
+quan~\(n\to\infty\), i per tant per~\(n\) prou gran tindrem
+que~\(\abs{\widehat{f^{k)}}(n)}\leq1\), d'on traiem que
+\[
+    \widehat{f}(n) \leq \frac{1}{(2\uppi)^{k}}\frac{1}{\abs{n}^{k}},
+\]
+i per tant~\(\widehat{f}(n) = \mathrm{O}(1/\abs{n}^{k})\)
+quan~\(\abs{n}\to\infty\).
+
+\end{document}
+
