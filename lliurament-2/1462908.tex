@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\uppi}{\pi}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+
+\title{Segon lliurament}
+\author{Claudi Lleyda Moltó -- 1462908}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item[\textbf{1.}] Siguin~\(f\) i~\(g\) dues funcions definides per
+        \[
+            f(x) = \chi_{[-1,1]}(x) = \begin{cases}
+                1 & \text{si } \abs{x} \leq 1 \\
+                0 & \text{si no}
+            \end{cases}
+            \qquad\text{i}\qquad
+            g(x) = \begin{cases}
+                1 - \abs{x} & \text{si } \abs{x} \leq 1 \\
+                0 & \text{si no}
+            \end{cases}
+        \]
+        Demostreu que
+        \[
+            \widehat{f}(\xi) = \frac{\sin(2\uppi\xi)}{\uppi\xi}
+            \qquad\text{i}\qquad
+            \widehat{g}(\xi) = \biggl(\frac{\sin(\uppi\xi)}{\uppi\xi}\biggr)^{2}
+        \]
+        sabent que~\(\widehat{f}(0) = 2\) i~\(\widehat{g}(0) = 1\).
+\end{enumerate}
+
+\end{document}
+
