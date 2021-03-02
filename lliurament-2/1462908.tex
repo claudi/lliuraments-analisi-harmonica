@@ -4,8 +4,13 @@
 \usepackage[catalan]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{lmodern}
 \usepackage{microtype}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definició}
 
 \newcommand{\iu}{\mathrm{i}}
 \newcommand{\e}{\mathrm{e}}
@@ -38,6 +43,50 @@
             \widehat{g}(\xi) = \biggl(\frac{\sin(\uppi\xi)}{\uppi\xi}\biggr)^{2}
         \]
         sabent que~\(\widehat{f}(0) = 2\) i~\(\widehat{g}(0) = 1\).
+\end{enumerate}
+
+\begin{definition}[Moderadament decreixent]
+    Es diu que una funció~\(f\) sobre~\(\mathbb{R}\) és de decreixement moderat
+    si existeix un~\(A>0\) tal que
+    \[
+        \abs{f(x)} \leq \abs{\frac{A}{1+\abs{x}^{2}}}
+        \qquad\text{per a tot }x\in\mathbb{R}.
+    \]
+\end{definition}
+
+\begin{enumerate}
+    \item[\textbf{2.}] El següent exercici i{\lgem}ustra el principi de que el
+        decreixement de~\(\widehat{f}\) està relacionat amb les propietats de
+        continuïtat de~\(f\).
+        \begin{enumerate}
+            \item[\textbf{(a)}] Suposem que~\(f\) és una funció de decreixement
+                moderat sobre~\(\mathbb{R}\), la transformada de Fourier de la
+                qual~\(\widehat{f}\) és contínua i satisfà
+                \[
+                    \widehat{f}(\xi) =
+                    \mathrm{O}\biggl(\frac{1}{\abs{\xi}^{1+\alpha}}\biggr)
+                    \qquad\text{quan } \abs{\xi}\to\infty
+                \]
+                per a cert~\(0<\alpha<1\). Demostreu que~\(f\) satisfà la
+                condició de~H\"older d'ordre~\(\alpha\), és a dir, que
+                \[
+                    \abs{f(x+h)-f(x)} \leq M\abs{h}^{\alpha}
+                    \qquad
+                    \text{per a algun } M>0 \text{ i tot } x,h\in\mathbb{R}.
+                \]
+        \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(b)}] Sigui~\(f\) una funció contínua a~\(\mathbb{R}\) que
+            s'anu{\lgem}a per~\(\abs{x}\geq1\), amb~\(f(0)=0\) i és igual
+            a~\(1/\log(1/\abs{x})\) per a tot~\(x\) en un entorn de l'origen.
+            Demostreu que~\(\widehat{f}\) no decreix moderadament.
+            De fet, no existeix~\(\varepsilon>0\) tal que~\(\widehat{f}(\xi) =
+            \textrm{O}(1/\abs{\xi}^{1+\varepsilon}\)
+            quan~\(\abs{\xi}\to\infty\).
+    \end{enumerate}
 \end{enumerate}
 
 \end{document}
