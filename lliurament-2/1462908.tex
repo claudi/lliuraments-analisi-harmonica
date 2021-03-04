@@ -18,6 +18,7 @@
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\abs}[1]{\lvert{#1}\rvert}
 \newcommand{\F}{\mathcal{F}}
+\newcommand{\conv}{\mathop{\ast}}
 
 \title{Segon lliurament}
 \author{Claudi Lleyda Moltó -- 1462908}
@@ -115,6 +116,29 @@
         Aquí~\(\F(f) = \widehat{f}\) és la transformada de Fourier,~\(\F^{4} =
         \F\circ\F\circ\F\circ\F\) i~\(I\) és l'operador identitat~\((If)(x) =
         f(x)\).
+\end{enumerate}
+
+\begin{enumerate}
+    \item[\textbf{5.}] Si~\(f\) és de decreixement moderat, aleshores
+        \begin{equation}
+            \label{eq:ex9}
+            \int_{-R}^{R}\biggl(1 - \frac{\abs{\xi}}{R}\biggr)
+            \widehat{f}(\xi)\e^{2\uppi\iu x\xi}\diff\xi
+            = (f\conv\F_{R})(x),
+        \end{equation}
+        on el nucli de Fejér a la recta real està definit per
+        \[
+            \F_{R}(t) = \begin{cases}\displaystyle
+                R\biggl(\frac{\sin(\uppi tR)}{\uppi tR}\biggr)^{2}
+                & \text{si } t \neq 0 \\
+                R & \text{si } t = 0.
+            \end{cases}
+        \]
+        Demostreu que~\(\{\F_{R}\}\) és una família de bons nuclis
+        quan~\(R\to\infty\), i per tant~\ref{eq:ex9} convergeix uniformement
+        a~\(f(x)\) quan~\(R\to\infty\).
+        Aquest és l'anàleg del teorema de Fejér per sèries de Fourier en el
+        context de la transformada de Fourier.
 \end{enumerate}
 
 \end{document}
