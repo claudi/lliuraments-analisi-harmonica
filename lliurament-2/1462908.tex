@@ -47,6 +47,36 @@
         \]
         sabent que~\(\widehat{f}(0) = 2\) i~\(\widehat{g}(0) = 1\).
 \end{enumerate}
+Si~\(\xi \neq 0\),
+\begin{align*}
+    \widehat{f}(\xi) &= \int_{-\infty}^{\infty}
+                        f(x) \e^{2\uppi\iu x\xi}\diff x \\
+                     &= \int_{-1}^{1}
+                        \e^{2\uppi\iu x\xi} \diff x \\
+                     &= \left[
+                         \frac{\sin(2\uppi x\xi)}{2\uppi\xi}
+                         - \frac{\iu\cos(2\uppi x\xi)}{2\uppi\xi}
+                     \right]_{x = -1}^{1}\\
+                     &= \frac{\sin(2\uppi\xi)}{\uppi\xi},
+\end{align*}
+i
+\begin{align*}
+    \widehat{g}(\xi) &= \int_{-\infty}^{\infty}
+                        g(x) \e^{2\uppi\iu x\xi}\diff x \\
+                     &= \int_{-1}^{1}
+                        \bigl(1-\abs{x}\bigr) \e^{2\uppi\iu x\xi}\diff x \\
+                     &= \int_{0}^{1}
+                        \bigl(1-x\bigr) \e^{2\uppi\iu x\xi}\diff x
+                      + \int_{-1}^{0}
+                        \bigl(1+x\bigr) \e^{2\uppi\iu x\xi}\diff x \\
+                     &= \frac{1-2\iu\uppi\xi-\e^{-2\iu\uppi\xi}}{4\uppi^{2}\xi^{2}}
+                      + \frac{1+2\iu\uppi\xi-\e^{2\iu\uppi\xi}}{4\uppi^{2}\xi^{2}} \\
+                     &= \frac{2-\e^{2\iu\uppi\xi}-\e^{-2\iu\uppi\xi}}{4\uppi^{2}\xi^{2}} \\
+                     &= \biggl[
+                        \frac{\e^{\iu\uppi\xi}-\e^{-\iu\uppi\xi}}{2\uppi\iu\xi}
+                        \biggr]^{2}
+                      = \biggl(\frac{\sin(\uppi\xi)}{\uppi\xi}\biggr)^{2}.
+\end{align*}
 
 \begin{definition}[Moderadament decreixent]
     Es diu que una funció~\(f\) sobre~\(\mathbb{R}\) és de decreixement moderat
