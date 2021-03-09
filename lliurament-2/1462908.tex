@@ -152,6 +152,30 @@ Com que~\(\abs{e^{2\uppi\iu h\xi}-1}\leq2\) tenim que
 \end{align*}
 i per tant~\(I_{2} = \mathrm{O}(h^{\alpha})\).
 
+Ara calculem
+\begin{align*}
+    I_{1} &= \int_{\abs{\xi}\leq\abs{h}^{-1}}
+             \abs{\widehat{f}(\xi)}\abs{e^{2\uppi\iu h\xi}-1}
+             \diff\xi \\
+          &\leq \int_{\abs{\xi}\leq\abs{h}^{-1}}
+             \frac{C}{\abs{\xi}^{1+\alpha}}
+             \abs{e^{2\uppi\iu h\xi}-1}
+             \diff\xi \\
+          &\leq \int_{\abs{\xi}\leq\abs{h}^{-1}}
+             \frac{C}{\abs{\xi}^{1+\alpha}}
+             \abs{2\sin(\uppi h\xi)}
+             \diff\xi \\
+          &\leq 2\uppi C\abs{h}
+             \int_{\abs{\xi}\leq\abs{h}^{-1}}
+             \frac{1}{\abs{\xi}^{1+\alpha}}\abs{\xi}
+             \diff\xi \\
+          &= 4\uppi C\abs{h}
+             \int_{0}^{\abs{h}^{-1}}
+             \frac{\xi}{\xi^{1+\alpha}}
+             \diff\xi
+           = 4\uppi C\frac{\abs{h}^{\alpha}}{1-\alpha}
+\end{align*}
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Sigui~\(f\) una funció contínua a~\(\mathbb{R}\) que
