@@ -111,8 +111,41 @@ i
         \end{enumerate}
 \end{enumerate}
 
-Definim~\(g(x)=f(x+h)-f(x)\). Tenim que~\(g\) és integrable, i que existeix una
-constant~\(C\) tal que~\(\abs{\widehat{g}(\xi)}\leq C/\abs{\xi}^{1+\alpha}\).
+% https://math.stackexchange.com/a/2046706/457514
+
+Si~\(h=0\) no cal fer cap argument.
+Suposem doncs que~\(h\neq0\) i tenim que
+\begin{align*}
+    \abs{f(x+h) - f(x)} &= \Abs{\int_{-\infty}^{\infty}
+                           \widehat{f}(\xi)\e^{2\uppi\iu(x+h)\xi}\diff\xi
+                         - \int_{-\infty}^{\infty}
+                           \widehat{f}(\xi)\e^{2\uppi\iu x\xi}\diff\xi} \\
+                        &= \Abs{\int_{-\infty}^{\infty}
+                           \widehat{f}(\xi)\e^{2\uppi\iu x\xi}
+                           \bigl(\e^{2\uppi\iu h\xi}-1\bigr)
+                           \diff\xi} \\
+                        &\leq \int_{-\infty}^{\infty}
+                           \abs{\widehat{f}(\xi)}\abs{e^{2\uppi\iu h\xi}-1}
+                           \diff\xi \\
+                        &= I_{1} + I_{2},
+\end{align*}
+on
+\[
+    I_{1} = \int_{\abs{\xi}\leq\abs{h}^{-1}}
+    \abs{\widehat{f}(\xi)}\abs{e^{2\uppi\iu h\xi}-1} \diff\xi
+    \qquad\text{i}\qquad
+    I_{2} = \int_{\abs{\xi}\geq\abs{h}^{-1}}
+    \abs{\widehat{f}(\xi)}\abs{e^{2\uppi\iu h\xi}-1} \diff\xi.
+\]
+Com que~\(\abs{e^{2\uppi\iu h\xi}-1}\leq2\) tenim que
+\begin{align*}
+    I_{2} &\leq \int_{\abs{\xi}\geq\abs{h}^{-1}}
+                \abs{\widehat{f}(\xi)}\diff\xi \\
+          &\leq \int_{\abs{\xi}\geq\abs{h}^{-1}}
+                \frac{1}{\abs{\xi}^{1+\alpha}} \diff\xi \\
+          &\leq h^{\alpha},
+\end{align*}
+i per tant~\(I_{2} = \mathrm{O}(h^{\alpha})\).
 
 \begin{enumerate}
     \item[]\begin{enumerate}
