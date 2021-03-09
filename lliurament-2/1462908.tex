@@ -139,11 +139,16 @@ on
 \]
 Com que~\(\abs{e^{2\uppi\iu h\xi}-1}\leq2\) tenim que
 \begin{align*}
-    I_{2} &\leq \int_{\abs{\xi}\geq\abs{h}^{-1}}
+    I_{2} &= \int_{\abs{\xi}\geq\abs{h}^{-1}}
+             \abs{\widehat{f}(\xi)}\abs{e^{2\uppi\iu h\xi}-1}
+             \diff\xi \\
+          &\leq 2\int_{\abs{\xi}\geq\abs{h}^{-1}}
                 \abs{\widehat{f}(\xi)}\diff\xi \\
-          &\leq \int_{\abs{\xi}\geq\abs{h}^{-1}}
-                \frac{1}{\abs{\xi}^{1+\alpha}} \diff\xi \\
-          &\leq h^{\alpha},
+          &\leq 2\int_{\abs{\xi}\geq\abs{h}^{-1}}
+                \frac{C}{\abs{\xi}^{1+\alpha}} \diff\xi \\
+          &= 2C
+          \biggl[\frac{-\xi^{\alpha}}{\alpha}\biggr]_{\xi=\abs{h}^{-1}}^{\infty} \\
+          &\leq 2C\frac{h^{\alpha}}{\alpha},
 \end{align*}
 i per tant~\(I_{2} = \mathrm{O}(h^{\alpha})\).
 
