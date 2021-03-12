@@ -302,6 +302,39 @@ Si prenem una funció~\(g\in S(\mathbb{R})\), tenim pel Teorema de Fubini que
     = \int_{-\infty}^{\infty} g(x)\widehat{f}(x) \diff x.
 \end{multline*}
 
+Suposem ara que~\(\widehat{f}(\xi) = 0\).
+Aleshores tenim que per a tot~\(g\in S(\mathbb{R})\) es satisfà
+\[
+    \int_{-\infty}^{\infty} f(x)\widehat{g}(x) \diff x
+    = \int_{-\infty}^{\infty} \widehat{f}(x) g(x) \diff x
+    = 0
+\]
+Suposem que~\(f(x_{0}) \neq 0\) per a cert~\(x_{0}\in\mathbb{R}\).
+Podem suposar sense pèrdua de generalitat que~\(f(x_{0}) > 0\).
+Aleshores existeix un~\(\delta>0\) tal que per a
+tot~\(x\in(x_{0}-\delta,x_{0}+\delta)\) tenim~\(f(x) > 0\).
+
+Podem considerar una funció~\(h\in S(\mathbb{R})\) tal que per a
+tot~\(x\in(x_{0}-\delta,x_{0}+\delta)\) tenim~\(h(x) > 0\), i per
+tot~\(x\notin(x_{0}-\delta,x_{0}+\delta)\) tenim~\(h(x) = 0\).
+Pel Teorema de la Transformada de Fourier Inversa tenim que
+\[
+    g(x)=\int_{-\infty}^{\infty}h(t)\e^{2\uppi\iu tx}\diff t\in S(\mathbb{R})
+    \qquad\text{i}\qquad
+    \widehat{g}(\xi) = h(\xi).
+\]
+Ara bé, també tindríem que
+\[
+    0
+    = \int_{-\infty}^{\infty} \widehat{f}(x) g(x) \diff x
+    = \int_{-\infty}^{\infty} f(x)\widehat{g}(x) \diff x
+    = \int_{-\infty}^{\infty} f(x)h(x) \diff x
+    > 0
+\]
+pel que arribem a contradicció i tenim que ha de ser~\(f(x) = 0\) per a
+tot~\(x\in\mathbb{R}\).
+
+
 \begin{enumerate}
     \item[\textbf{4.}] La funció~\(\e^{-\uppi x^{2}}\) és la seva pròpia
         transformada de Fourier.
