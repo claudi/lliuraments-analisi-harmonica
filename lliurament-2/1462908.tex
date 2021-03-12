@@ -240,6 +240,28 @@ i pel teorema de convergència dominada tenim, per a tot~\(\xi\in\mathbb{R}\),
 \]
 i per tant~\(\widehat{f}\) és contínua.
 
+Veiem ara que~\(\widehat{f}(\xi)\to0\) quan~\(\abs{\xi}\to\infty\).
+Prenem un~\(\varepsilon>0\), i per ser~\(f\) de creixement moderat tenim que
+existeix un~\(K\) tal que
+\[
+    \int_{-K}^{K} \abs{f(x)} \diff x < \varepsilon
+\]
+Com que, per hipòtesi,~\(f\) és contínua, tenim que~\(f\) és uniformement
+contínua en l'interval~\([-K,K]\), i per tant existeix un~\(\delta>0\) tal que
+\[
+    \abs{f(x - t) - f(x)} < \frac{\varepsilon}{K}
+\]
+per a tot~\(x\in[-K,K]\) i~\(\abs{t}<\delta\).
+
+Aleshores tenim que
+\begin{align*}
+    \abs{\widehat{f}(\xi)} &= \int_{\infty}^{\infty}
+                              f(x)
+                              \e^{-2\uppi\iu x\xi}
+                              \diff x \\
+                           &\leq
+\end{align*}
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Demostreu que si~\(\widehat{f}(\xi) = 0\) per a
