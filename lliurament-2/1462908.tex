@@ -199,20 +199,16 @@ Veiem que~\(f\) no és de H\"older.
 \end{enumerate}
 
 Comencem veient que~\(\widehat{f}\) és contínua.
-Com per hipòtesi~\(f\) és de creixement moderat, tenim que existeix un~\(M>0\)
-tal que~\(\abs{f(x)}<M\) per tot~\(x\in\mathbb{R}\), i si prenem
-un~\(\varepsilon>0\) existeix un~\(K\in\mathbb{R}\) tal que
+Per a tot~\(t,\xi\in\mathbb{R}\), tenim
 \[
-    \int_{\abs{x}\geq K} \abs{f} \diff x < \varepsilon.
-\]
-Aleshores per a tot~\(t,\xi\in\mathbb{R}\), tenim
-\[
-    \abs{\widehat{f}(\xi + t)-\widehat{f}(\xi)}
-    \leq
+    \widehat{f}(\xi + t)-\widehat{f}(\xi)
+    =
     \int_{-\infty}^{\infty}
-    \abs{f(x)}
-    \abs{e^{-2\uppi x\xi}}
-    \abs{e^{-2\uppi\iu tx} - 1}
+    f(x)
+    e^{-2\uppi x\xi}
+    \bigl(
+        e^{-2\uppi\iu tx} - 1
+    \bigr)
     \diff x
 \]
 
