@@ -292,7 +292,15 @@ quan~\(\varepsilon\to0\) obtenim el que volíem.
     \end{enumerate}
 \end{enumerate}
 
-
+Si prenem una funció~\(g\in S(\mathbb{R})\) tenim pel Teorema de Fubini que
+\begin{multline*}
+    \int_{-\infty}^{\infty} f(x)\widehat{g}(x) \diff x
+    = \int_{-\infty}^{\infty} f(x)
+    \int_{-\infty}^{\infty} g(y) \e^{-2\uppi\iu yx} \diff y\, \diff x = \\
+    = \int_{-\infty}^{\infty} g(x)
+    \int_{-\infty}^{\infty} f(y) \e^{-2\uppi\iu yx} \diff y\, \diff x
+    = \int_{-\infty}^{\infty} g(x)\widehat{f}(x) \diff x.
+\end{multline*}
 
 \begin{enumerate}
     \item[\textbf{4.}] La funció~\(\e^{-\uppi x^{2}}\) és la seva pròpia
