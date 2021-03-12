@@ -205,12 +205,40 @@ Per a tot~\(t,\xi\in\mathbb{R}\), tenim
     =
     \int_{-\infty}^{\infty}
     f(x)
-    e^{-2\uppi x\xi}
+    e^{-2\uppi\iu x\xi}
+    \bigl(
+        e^{-2\uppi\iu tx} - 1
+    \bigr)
+    \diff x.
+\]
+
+Com per hipòtesi~\(f\) és de creixement moderat, tenim que existeix un~\(A>0\)
+tal que per a tot~\(x,t,\xi\in\mathbb{R}\) tenim
+\[
+    \Abs{f(x)
+    e^{-2\uppi\iu x\xi}
+    \bigl(
+        e^{-2\uppi\iu tx} - 1
+    \bigr)
+}
+    \leq
+    \frac{A}{1+x^{2}},
+\]
+i pel teorema de convergència dominada tenim, per a tot~\(\xi\in\mathbb{R}\),
+\[
+    \lim_{t\to0} \widehat{f}(\xi + t)-\widehat{f}(\xi)
+    =
+    \int_{-\infty}^{\infty}
+    f(x)
+    e^{-2\uppi\iu x\xi}
+    \lim_{t\to0}
     \bigl(
         e^{-2\uppi\iu tx} - 1
     \bigr)
     \diff x
+    = 0,
 \]
+i per tant~\(\widehat{f}\) és contínua.
 
 \begin{enumerate}
     \item[]\begin{enumerate}
