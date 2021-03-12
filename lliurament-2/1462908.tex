@@ -253,14 +253,37 @@ contínua en l'interval~\([-K,K]\), i per tant existeix un~\(\delta>0\) tal que
 \]
 per a tot~\(x\in[-K,K]\) i~\(\abs{t}<\delta\).
 
-Aleshores tenim que
+Aleshores per a tot~\(\xi\) satisfent~\(\frac{1}{2\xi}<\delta\) tenim que
 \begin{align*}
-    \abs{\widehat{f}(\xi)} &= \int_{\infty}^{\infty}
-                              f(x)
+    \abs{\widehat{f}(\xi)} &= \frac{1}{2} \Abs{\int_{\infty}^{\infty}
+                              \Bigl(
+                                  f(x) - f\bigl(
+                                      x - {\textstyle\frac{1}{2\xi}}
+                                  \bigr)
+                              \Bigr)
                               \e^{-2\uppi\iu x\xi}
+                              \diff x} \\
+                           &\leq \frac{1}{2} \int_{-\infty}^{\infty}
+                              \Abs{f(x) - f\bigl(
+                                      x - {\textstyle\frac{1}{2\xi}}
+                              \bigr)}
                               \diff x \\
-                           &\leq
+                           &\leq \frac{1}{2} \int_{\abs{x}\leq K}
+                              \Abs{f(x) - f\bigl(
+                                      x - {\textstyle\frac{1}{2\xi}}
+                              \bigr)}
+                              \diff x
+                              +
+                              \int_{\abs{x}\geq K}
+                              2f(x)
+                              \diff x \\
+                           &\leq \frac{1}{2}
+                              \frac{\varepsilon}{K}2K
+                              +\varepsilon \\
+                           &\leq \varepsilon
 \end{align*}
+i per tant~\(\abs{\widehat{f}(\xi)} \leq \varepsilon\) quan~\(\xi\to\infty\), i
+quan~\(\varepsilon\to0\) obtenim el que volíem.
 
 \begin{enumerate}
     \item[]\begin{enumerate}
@@ -268,6 +291,8 @@ Aleshores tenim que
             tot~\(\xi\), aleshores~\(f\) és idènticament~\(0\).
     \end{enumerate}
 \end{enumerate}
+
+
 
 \begin{enumerate}
     \item[\textbf{4.}] La funció~\(\e^{-\uppi x^{2}}\) és la seva pròpia
