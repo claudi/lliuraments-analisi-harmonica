@@ -410,5 +410,28 @@ A més, com~\(\F_{R}(t) \geq 0\) tenim que
     = 1 \geq 0.
 \]
 
+Per últim veiem que per a tot~\(\delta > 0\) es satisfà
+\[
+    \Abs{\int_{\abs{t}\geq\delta} \F_{R}(t)\diff t} \to 0
+    \qquad
+    \text{quan }
+    R \to \infty.
+\]
+Tenim que
+\begin{align*}
+    \Abs{\int_{\abs{t}\geq\delta} \F_{R}(t) \diff t}
+        &= \int_{\abs{t}\geq\delta}
+           R\biggl(\frac{\sin(\uppi tR)}{\uppi tR}\biggr)^{2}
+           \diff t \\
+        &= \int_{\abs{t}\geq\delta}
+           R\biggl(\frac{1}{\uppi tR}\biggr)^{2}
+           \diff t \\
+        &= \int_{\abs{t}\geq\delta}
+           \frac{1}{R\uppi^{2}t^{2}}
+           \diff t \\
+        &= \frac{2}{R\uppi^{2}\delta} \xrightarrow{R\to\infty} 0,
+\end{align*}
+i per tant~\(\F_{R}\) és una aproximació de la unitat.
+
 \end{document}
 
