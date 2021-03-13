@@ -369,5 +369,46 @@ tot~\(x\in\mathbb{R}\).
         context de la transformada de Fourier.
 \end{enumerate}
 
+Comprovem que~\(\F_{R}\) és una aproximació de la unitat quan~\(R\to\infty\).
+Per fer això primer veiem que
+\[
+    \int_{-\infty}^{\infty} \F_{R}(t) \diff t = 1
+    \qquad\text{i}\qquad
+    \int_{-\infty}^{\infty} \abs{F_{R}(t)} \diff t \geq 0.
+\]
+Calculem
+\begin{align*}
+    \int_{-\infty}^{\infty} \F_{R}(t)\diff t
+        &= \int_{-\infty}^{\infty}
+           R\biggl(\frac{\sin(\uppi tR)}{\uppi tR}\biggr)^{2}
+           \diff t \\
+        &= \frac{1}{\uppi}
+           \int_{-\infty}^{\infty}
+           \biggl(\frac{\sin(u)}{u}\biggr)^{2}
+           \diff u \\
+        &= \frac{1}{\uppi}
+           \int_{-\infty}^{\infty}
+           \frac{1-\cos^{2}(u)}{u^{2}}
+           \diff u \\
+        &= \frac{1}{\uppi}
+           \int_{-\infty}^{\infty}
+           \frac{\bigl(1-\cos(u)\bigr)\bigl(1+\cos(u)\bigr)}{u^{2}}
+           \diff u \\
+        &= \frac{1}{\uppi}
+           \bigl(1+\cos(u)\bigr)
+           \int_{-\infty}^{\infty}
+           \frac{1-\cos(u)}{u^{2}}
+           \diff u
+           +
+           \cos(u) \\
+        &= 1 + \cos(u) - \cos(u) = 1.
+\end{align*}
+A més, com~\(\F_{R}(t) \geq 0\) tenim que
+\[
+    \int_{-\infty}^{\infty} \abs{F_{R}(t)} \diff t
+    = \int_{-\infty}^{\infty} F_{R}(t) \diff t
+    = 1 \geq 0.
+\]
+
 \end{document}
 
