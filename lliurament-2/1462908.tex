@@ -186,7 +186,17 @@ i
     \end{enumerate}
 \end{enumerate}
 
-Veiem que~\(f\) no és de H\"older.
+Veiem que~\(f\) no és de H\"older d'ordre~\(\alpha\) per cap~\(0<\alpha<1\) al
+voltant de~\(x=0\).
+Calculem
+\begin{align*}
+    \lim_{h\to0}\frac{f(h)-f(0)}{h^{\alpha}}
+        &= \lim_{h\to0} \frac{1/h^{\alpha}}{\log(1/h)}
+\intertext{i per la regla de L'H\^opital}
+        &= \lim_{h\to0}\frac{-\alpha h^{-\alpha-1}}{\frac{1}{\alpha}(-h^{2})} \\
+        &= \lim_{h\to0} \alpha h^{-\alpha} = \infty,
+\end{align*}
+i per la contrarecíproca de l'exercici~\textbf{2(a)} tenim el que volíem.
 
 \begin{enumerate}
     \item[\textbf{3.}] Suposeu que~\(f\) és contínua i de creixement moderat.
