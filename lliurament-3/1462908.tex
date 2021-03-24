@@ -135,6 +135,34 @@ un enter.
     \end{enumerate}
 \end{enumerate}
 
+Si prenem~\(\alpha\) satisfent~\(0<\alpha<1\), aleshores les
+funcions~\(f_{n}(\alpha)=\frac{1}{(n+\alpha)^{2}}\) són integrables, i per tant
+\begin{multline*}
+    \sum_{n=-\infty}^{\infty}
+    \frac{-1}{n+\alpha}
+    =
+    \sum_{n=-\infty}^{\infty}
+    \int
+    \frac{1}{(n+\alpha)^{2}}
+    \diff\alpha
+    = \\ =
+    \int
+    \sum_{n=-\infty}^{\infty}
+    \frac{1}{(n+\alpha)^{2}}
+    \diff\alpha
+    =
+    \int
+    \frac{\uppi^{2}}{\sin^{2}(\uppi\alpha)}
+    \diff\alpha
+    =
+    \frac{-\uppi}{\tan(\uppi\alpha)}
+\end{multline*}
+i per tant
+\[
+    \sum_{n=-\infty}^{\infty} \frac{1}{n+\alpha}
+    = \frac{\uppi}{\tan(\uppi\alpha)}.
+\]
+
 \begin{enumerate}
     \item[\textbf{4.}] El nucli de Dirichlet a la recta real està definit per
         \[
