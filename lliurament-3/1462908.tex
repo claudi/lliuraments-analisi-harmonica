@@ -79,5 +79,32 @@
             quan~\(\alpha\) és real però no enter.
     \end{enumerate}
 \end{enumerate}
+
+\begin{enumerate}
+    \item[\textbf{4.}] El nucli de Dirichlet a la recta real està definit per
+        \[
+            \int_{-R}^{R}\widehat{f}(\xi)\e^{2\uppi\iu x\xi}\diff\xi
+            = (f\ast \D_{R})(x)
+        \]
+        tal que
+        \[
+            \D_{R}(x) = \widehat{\chi_{[-R,R]}}(x)
+            = \frac{\sin(2\uppi Rx)}{\uppi x}.
+        \]
+
+        A demés, el nucli de Dirichlet modificat per funcions de període~\(1\)
+        està definit per
+        \[
+            \D^{\ast}_{N}(x)
+            = \sum_{\abs{n} \leq N-1} \e^{2\uppi\iu nx}
+            + \frac{1}{2}\bigl(\e^{-2\uppi\iu Nx} + \e^{2\uppi\iu Nx}\bigr).
+        \]
+
+        Demostreu que el resultat de l'exercici~\(\textbf{4.}\) ens dóna
+        \[
+            \sum_{n=-\infty}^{\infty} \D_{N}(x+n) = \D^{\ast}_{N}(x),
+        \]
+        on~\(N\geq1\) és un enter.
+\end{enumerate}
 \end{document}
 
