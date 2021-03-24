@@ -88,6 +88,41 @@ aleshores
     \widehat{g}(\xi) = \biggl(\frac{\sin(\uppi\xi)}{\uppi\xi}\biggr)^{2}.
 \]
 
+Per ser~\(g\in\mathcal{S}(\mathbb{R})\) tenim que la transformada de Fourier
+de~\(\widehat{g}\) és~\(g\), i per tant en aplicar la fórmula de sumació de
+Poisson trobem que
+\[
+    \sum_{n=-\infty}^{\infty}
+    \frac{\sin^{2}(\uppi(\alpha+n))}{\uppi^{2}(\alpha+n)^{2}}
+    =
+    \sum_{n=-\infty}^{\infty}
+    g(n) \e^{2\uppi\iu nx}
+\]
+Per un costat tenim que~\(g(n)=1\) si~\(n=0\), i~\(g(n)=0\) si~\(n\neq0\).
+Per tant
+\[
+    \sum_{n=-\infty}^{\infty}
+    g(n) \e^{2\uppi\iu nx}
+    = 1.
+\]
+Per altra banda, tenim que~\(\sin(\uppi\alpha+\uppi n)=\sin(\uppi\alpha)\) per
+tot~\(n\) enter, i així
+\[
+    \sum_{n=-\infty}^{\infty}
+    \frac{\sin^{2}(\uppi(\alpha+n))}{\uppi^{2}(\alpha+n)^{2}}
+    =
+    \frac{\sin^{2}(\uppi\alpha)}{\uppi^{2}}
+    \sum_{n=-\infty}^{\infty}
+    \frac{1}{(\alpha+n)^{2}},
+\]
+i per tant
+\[
+    \sum_{n=-\infty}^{\infty} \frac{1}{(n+\alpha)^{2}}
+    = \frac{\uppi^{2}}{\sin^{2}(\uppi\alpha)}
+\]
+sempre que~\(\sin(\uppi\alpha)\neq0\), i tenim prou amb que~\(\alpha\) no sigui
+un enter.
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Demostreu com a conseqüència que
