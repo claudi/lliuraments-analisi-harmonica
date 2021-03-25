@@ -230,6 +230,39 @@ i per tant
         on~\(N\geq1\) és un enter.
 \end{enumerate}
 
+Utilitzant l'apartat~\textbf{3(b)} tenim que
+\begin{align*}
+    \sum_{n=-\infty}^{\infty} \D_{N}(x+n)
+        &= \sum_{n=-\infty}^{\infty}
+           \frac{\sin\bigl(2\uppi N(x+n)\bigr)}{\uppi(x+n)} \\
+        &= \sum_{n=-\infty}^{\infty}
+           \frac{\sin(2\uppi Nx)}{\uppi(x+n)} \\
+        &= \frac{\sin(2\uppi Nx)}{\uppi}
+           \sum_{n=-\infty}^{\infty}
+           \frac{1}{x+n} \\
+        &= \frac{\sin(2\uppi Nx)}{\uppi}
+           \frac{\uppi}{\tan(\uppi x)} \\
+        &= \frac{\sin(2\uppi Nx)}{\tan(\uppi x)}
+\end{align*}
+i per altra banda
+\begin{align*}
+    \sum_{\abs{n} \leq N-1} \e^{2\uppi\iu nx}
+        &= \frac{\e^{\uppi\iu(2N-1)x}-\e^{-\uppi\iu(2N-1)x}}
+           {\e^{\uppi\iu x}-\e^{-\uppi\iu x}} \\
+        &= \frac{\sin\bigl((2N-1)\uppi x\bigr)}{\sin(\uppi x)} \\
+        &= \frac{\sin(2\uppi Nx)\cos(\uppi x) - \cos(2\uppi Nx)\sin(\uppi x)}
+           {\sin(\uppi x)} \\
+        &= \frac{\sin(2\uppi Nx)}{\tan(\uppi x)} - \cos(2\uppi Nx),
+\end{align*}
+i per tant
+\[
+    \sum_{n=-\infty}^{\infty}
+    \frac{\sin(2\uppi N(x+n))}{\uppi(x+n)}
+    =
+    \cos(2\uppi Nx) +
+    \sum_{\abs{n} \leq N-1} \e^{2\uppi\iu nx}.
+\]
+
 \begin{enumerate}
     \item[\textbf{5.}] Apliqueu la fórmula de sumació de Poisson a
         \[
