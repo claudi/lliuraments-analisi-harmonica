@@ -38,6 +38,27 @@
         per tot~\(x\in\mathbb{R}\), aleshores~\(f=0\).
 \end{enumerate}
 
+Posem~\(g(x) = \e^{-x^{2}}\). Aleshores
+\begin{align*}
+    \bigl(f\ast g\bigr)(x)
+        &= \int_{-\infty}^{\infty} f(y)\e^{-(y-x)^{2}} \diff y \\
+        &= \int_{-\infty}^{\infty} f(y)\e^{-y^{2}}\e^{2xy}\e^{-x^{2}} \diff y \\
+        &= \e^{-x^{2}}\int_{-\infty}^{\infty} f(y)\e^{-y^{2}}\e^{2xy} \diff y \\
+        &= 0
+\end{align*}
+per a tot~\(x\in\mathbb{R}\).
+
+Aleshores tenim que
+\[
+    \widehat{f\ast g}(\xi) = \widehat{f}(\xi)\widehat{g}(\xi) = 0
+\]
+i per tant ha de ser~\(\widehat{f} = 0\) \'o~\(\widehat{g} = 0\).
+
+Si~\(\widehat{f}\neq0\) tenim que~\(\widehat{g} = 0\), però per
+l'exercici~\textbf{3(b)} de la segona entrega tenim que~\(g=0\), i per tant ha
+de ser~\(\widehat{f}=0\). Aleshores, de nou per l'exercici~\(\textbf{3(b)}\) de
+la segona entrega, tenim que ha de ser~\(f=0\).
+
 \begin{enumerate}
     \item[\textbf{2.}] Demostreu que la periodització del nucli de
         Fejér~\(\F_{N}\) a la recta real és igual al nucli de Fejér per funcions
