@@ -54,6 +54,25 @@
         \]
 \end{enumerate}
 
+Per l'exercici~\textbf{3.} tenim que
+\begin{align*}
+    \sum_{n=-\infty}^{\infty} \F_{N}(x+n)
+        &=
+        \sum_{n=-\infty}^{\infty}
+        N\biggl(\frac{\sin(N\uppi (x+n))}{N\uppi (x+n)}\biggr)^{2} \\
+        &=
+        \sum_{n=-\infty}^{\infty}
+        N\biggl(\frac{\sin(N\uppi x)}{N\uppi (x+n)}\biggr)^{2} \\
+        &=
+        \frac{\sin^{2}(N\uppi x)}{N\uppi^{2}}
+        \sum_{n=-\infty}^{\infty}
+        \frac{1}{(n+x)^{2}} \\
+        &=
+        \frac{\sin^{2}(N\uppi x)}{N\uppi^{2}}
+        \frac{\uppi^{2}}{\sin^{2}(\uppi x)}
+        = \frac{1}{N}\frac{\sin^{2}(N\uppi x)}{\sin^{2}(\uppi x)}.
+\end{align*}
+
 \begin{theorem}[Fórmula de summació de Poisson]
     Sigui~\(f\in\mathcal{S}(\mathbb{R})\), aleshores
     \[
