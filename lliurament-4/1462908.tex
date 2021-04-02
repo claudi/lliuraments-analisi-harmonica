@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{url}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\providecommand{\uppi}{\pi}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\Abs}[1]{\left\lvert{#1}\right\rvert}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\conv}{\mathop{\ast}}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\title{Quart lliurament}
+\author{Claudi Lleyda Moltó -- 1462908}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item[\textbf{1.}] Suposem que~\(f\) és de decreixement moderat i que la
+        seva transformada de Fourier~\(\widehat{f}\) té suport~\(I=[-1/2,1/2]\).
+        Aleshores,~\(f\) està completament determinada per la seva restricció
+        a~\(\ZZ\).
+        Això vol dir que si~\(g\) és un altre funció de decreixement moderat la
+        transformada de Fourier de la qual té suport~\(I\) i~\(f(n)=g(n)\) per
+        tot~\(n\in\ZZ\), aleshores~\(f=g\).
+        Més precisament:
+        \begin{enumerate}
+            \item[\textbf{(a)}] Demostreu que la següent fórmula de reconstrucció
+                és certa:
+                \[
+                    f(x) = \sum_{n=-\infty}^{\infty} f(n) K(x-n)
+                    \qquad\text{on}\qquad
+                    K(y) = \frac{\sin(\uppi y)}{\uppi y}.
+                \]
+        \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(b)}] Si~\(\lambda > 1\), aleshores
+            \[
+                f(x) =
+                \sum_{n-\infty}^{\infty}
+                \frac{1}{\lambda} f\Bigl(\frac{n}{\lambda}\Bigr)
+                K_{\lambda}\Bigl(x-\frac{n}{\lambda}\Bigr)
+                \quad\text{on}\quad
+                K_{\lambda}(y) =
+                \frac{\cos(\uppi y) - \cos(\uppi\lambda y)}
+                {\uppi^{2}(\lambda-1)y^{2}}.
+            \]
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+        \item[\textbf{(c)}] Demostreu que
+            \[
+                \int_{-\infty}^{\infty}
+                \abs{f(x)}^{2}
+                \diff x
+                =
+                \sum_{n=-\infty}^{\infty}
+                \abs{f(n)}^{2}.
+            \]
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
+
