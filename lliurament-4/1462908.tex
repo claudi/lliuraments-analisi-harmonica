@@ -57,6 +57,57 @@
         \end{enumerate}
 \end{enumerate}
 
+Recordem que al primer exercici del segon lliurament vam veure
+\[
+    \widehat{\chi_{[-1,1]}}(y) = \frac{\sin(2\uppi y)}{\uppi y}.
+\]
+
+Aplicant la fórmula de sumació de Poisson a~\(\widehat{f}\) obtenim
+\[
+    \sum_{n=-\infty}^{\infty}
+    \widehat{f}(x+n)
+    =
+    \sum_{n=-\infty}^{\infty}
+    f(n)\e^{2\uppi\iu nx},
+\]
+i per tant
+\begin{align*}
+    \widehat{f}(x) &= \chi_{[-1/2,1/2]}(x)
+                      \sum_{n=-\infty}^{\infty}
+                      \widehat{f}(x+n) \\
+                   &= \chi_{[-1/2,1/2]}(x)
+                      \sum_{n=-\infty}^{\infty}
+                      f(n)
+                      \e^{2\uppi\iu nx} \\
+                   &= \sum_{n=-\infty}^{\infty}
+                      \chi_{[-1/2,1/2]}(x)
+                      f(n)
+                      \e^{2\uppi\iu nx},
+\end{align*}
+Aleshores, aplicant la transformada de Fourier trobem que
+\begin{align*}
+    f(x) &= \int_{-\infty}^{\infty}
+            \sum_{n=-\infty}^{\infty}
+            \chi_{[-1/2,1/2]}(t)
+            f(n)
+            \e^{2\uppi\iu nt}
+            \e^{-2\uppi\iu x}
+            \diff t \\
+         &= \sum_{n=-\infty}^{\infty}
+            f(n)
+            \int_{-\infty}^{\infty}
+            \chi_{[-1/2,1/2]}(t)
+            \e^{2\uppi\iu nt}
+            \e^{-2\uppi\iu x}
+            \diff t \\
+         &= \sum_{n=-\infty}^{\infty}
+            f(n)
+            \frac{\sin\bigl(\uppi(x-n)\bigr)}{\uppi(x-n)}
+          = \sum_{n=-\infty}^{\infty}
+            f(n)
+            K(x-n).
+\end{align*}
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Si~\(\lambda > 1\), aleshores
