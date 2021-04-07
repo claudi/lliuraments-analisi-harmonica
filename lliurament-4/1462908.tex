@@ -13,6 +13,11 @@
 \theoremstyle{plain}
 \newtheorem{theorem}{Teorema}
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definició}
+
+\DeclareMathOperator{\Lop}{L}
+
 \newcommand{\iu}{\mathrm{i}}
 \newcommand{\e}{\mathrm{e}}
 \providecommand{\uppi}{\pi}
@@ -252,6 +257,14 @@
             transformada de Fourier.
     \end{enumerate}
 \end{enumerate}
+
+\begin{definition}[Operador d'Hermite]
+    Per a qualsevol funció~\(f\) de la classe de Schwartz definim l'operador
+    \[
+        \Lop(f) = -\frac{\diff^{2} f}{\diff x^{2}} + x^{2}f.
+    \]
+    Aquest operador s'anomena \emph{operador d'Hermite}.
+\end{definition}
 
 \end{document}
 
