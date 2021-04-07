@@ -58,30 +58,30 @@
 
 Recordem que al primer exercici del segon lliurament vam veure
 \[
-    \widehat{\chi_{[-1,1]}}(y) = \frac{\sin(2\uppi y)}{\uppi y}.
+    \widehat{\chi_{[-1,1]}}(\xi) = \frac{\sin(2\uppi \xi)}{\uppi \xi}.
 \]
 
 Aplicant la fórmula de sumació de Poisson a~\(\widehat{f}\) obtenim
 \[
     \sum_{n=-\infty}^{\infty}
-    \widehat{f}(x+n)
+    \widehat{f}(\xi+n)
     =
     \sum_{n=-\infty}^{\infty}
-    f(n)\e^{2\uppi\iu nx},
+    f(n)\e^{2\uppi\iu n\xi},
 \]
 i per tant
 \begin{align*}
-    \widehat{f}(x) &= \chi_{[-1/2,1/2]}(x)
+    \widehat{f}(\xi) &= \chi_{[-1/2,1/2]}(\xi)
                       \sum_{n=-\infty}^{\infty}
-                      \widehat{f}(x+n) \\
-                   &= \chi_{[-1/2,1/2]}(x)
+                      \widehat{f}(\xi+n) \\
+                   &= \chi_{[-1/2,1/2]}(\xi)
                       \sum_{n=-\infty}^{\infty}
                       f(n)
-                      \e^{2\uppi\iu nx} \\
+                      \e^{2\uppi\iu n\xi} \\
                    &= \sum_{n=-\infty}^{\infty}
-                      \chi_{[-1/2,1/2]}(x)
+                      \chi_{[-1/2,1/2]}(\xi)
                       f(n)
-                      \e^{2\uppi\iu nx},
+                      \e^{2\uppi\iu n\xi},
 \end{align*}
 Aleshores, aplicant la transformada de Fourier trobem que
 \begin{align*}
