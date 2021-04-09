@@ -401,6 +401,45 @@ i per tant
     \end{enumerate}
 \end{enumerate}
 
+Per la fórmula de Plancharel tenim
+\begin{multline*}
+    \int_{-\infty}^{\infty}
+    \abs{u(x,y)-f_{0}(x)}^{2}
+    \diff x
+    =
+    \int_{-\infty}^{\infty}
+    \abs{\widehat{u}(\xi,y)-\widehat{f}_{0}(\xi,y)}
+    \diff\xi
+    = \\ =
+    \int_{-\infty}^{\infty}
+    \biggl(\frac{\sinh(2\uppi(1-y)\xi)}{\sinh(2\uppi\xi)}-1\biggr)
+    \widehat{f}_{0}(\xi)
+    +
+    \frac{\sinh(2\uppi y\xi)}{\sinh(2\uppi\xi)}
+    \widehat{f}_{1}(\xi)
+    \diff\xi
+    \overset{y\to 0}{\longrightarrow} 0,
+\end{multline*}
+i
+\begin{multline*}
+    \int_{-\infty}^{\infty}
+    \abs{u(x,y)-f_{1}(x)}^{2}
+    \diff x
+    =
+    \int_{-\infty}^{\infty}
+    \abs{\widehat{u}(\xi,y)-\widehat{f}_{1}(\xi,y)}
+    \diff\xi
+    = \\ =
+    \int_{-\infty}^{\infty}
+    \frac{\sinh(2\uppi(1-y)\xi)}{\sinh(2\uppi\xi)}
+    \widehat{f}_{0}(\xi)
+    +
+    \biggl(\frac{\sinh(2\uppi y\xi)}{\sinh(2\uppi\xi)}-1\biggr)
+    \widehat{f}_{1}(\xi)
+    \diff\xi
+    \overset{y\to 1}{\longrightarrow} 0.
+\end{multline*}
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(c)}] Si~\(\Phi(\xi)=\sinh(2\uppi a\xi)/\sinh(2\uppi\xi)\), amb
