@@ -139,6 +139,40 @@ Aleshores, aplicant la transformada de Fourier trobem que
     \end{enumerate}
 \end{enumerate}
 
+Per la fórmula de Plancharel tenim que
+\begin{align*}
+    \int_{-\infty}^{\infty}
+    \abs{f(x)}^{2}
+    \diff x
+    &=
+    \int_{-\infty}^{\infty}
+    \abs{\widehat{f}(\xi)}^{2}
+    \diff \xi \\
+    &=
+    \int_{-1/2}^{1/2}
+    \Abs{\sum_{n=-\infty}^{\infty}f(n)\e^{-2\uppi\iu nx}}^{2}
+    \diff x \\
+    &=
+    \int_{-1/2}^{1/2}
+    \sum_{m=-\infty}^{\infty}
+    \sum_{n=-\infty}^{\infty}
+    f(n)
+    \overline{f(m)}
+    \e^{-2\uppi\iu (n-m)x}
+    \diff x \\
+    &=
+    \sum_{m=-\infty}^{\infty}
+    \sum_{n=-\infty}^{\infty}
+    f(n)
+    \overline{f(m)}
+    \int_{-1/2}^{1/2}
+    \e^{-2\uppi\iu (n-m)x}
+    \diff x \\
+    &=
+    \sum_{n=-\infty}^{\infty}
+    \abs{f(n)}^{2}.
+\end{align*}
+
 \begin{enumerate}
     \item[\textbf{2.}] Suposem que~\(f\) és contínua en~\(\RR\).
         Demostreu que~\(f\) i~\(\widehat{f}\) no poden ser les dues de suport
