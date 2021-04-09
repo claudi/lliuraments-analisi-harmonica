@@ -215,7 +215,52 @@ i imposant~\eqref{ex3:eq1} tenim
     \widehat{U}(\xi,t)
     =
     F(\xi)
-    \e^{(-4\uppi^{2}\xi^{2}+(1-a)2\uppi\iu\xi)t}.
+    \e^{-4\uppi^{2}\xi^{2}t+(1-a)2\uppi\iu\xi t}.
+\]
+
+Busquem solucions de la forma
+\[
+    U(y,t)
+    =
+    (F\ast K_{t})(y)
+    \qquad\text{on}\qquad
+    \widehat{K}_{t}(\xi)
+    =
+    \e^{-4\uppi^{2}\xi^{2}t+(1-a)2\uppi\iu\xi t}
+\]
+Calculem
+\begin{align*}
+    K_{t}(x) &= \int_{-\infty}^{\infty}
+                \widehat{K}_{t}(\xi)
+                \e^{2\uppi\iu\xi x}
+                \diff\xi \\
+             &= \int_{-\infty}^{\infty}
+                \e^{-4\uppi^{2}\xi^{2}t+(1-a)2\uppi\iu\xi t}
+                \e^{2\uppi\iu\xi x}
+                \diff\xi \\
+             &= \frac{1}{2\sqrt{\uppi t}}
+             \e^{-{((1-a)t+x)^{2}}/{4t}}
+\end{align*}
+
+Per tant
+\[
+    U(y,t)
+    =
+    \frac{1}{2\sqrt{\uppi t}}
+    \int_{-\infty}^{\infty}
+    F(\tau)K_{t}
+    (y-\tau)
+    \diff\tau,
+\]
+i desfent el canvi de variable obtenim la solució
+\[
+    u(x,t)
+    =
+    \frac{1}{2\sqrt{\uppi t}}
+    \int_{0}^{\infty}
+    \e^{-(\log(v/x)+(1-a)t)^{2}/4t}
+    \frac{f(v)}{v}
+    \diff v.
 \]
 
 \begin{enumerate}
