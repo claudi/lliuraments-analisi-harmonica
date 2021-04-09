@@ -176,6 +176,48 @@ i per tant ha de ser~\(f(x)=0\).
         variable~\(x=\e^{-y}\) tal que~\(-\infty<y<\infty\).
 \end{enumerate}
 
+Fent el canvi de variable de l'enunciat el problema es redueix a l'equació
+\[
+    \frac{\partial^{2} U}{\partial y^{2}}
+    +
+    (1 - a)
+    \frac{\partial U}{\partial y}
+    =
+    \frac{\partial U}{\partial t}
+\]
+amb la condició
+\begin{equation}
+    \label{ex3:eq1}
+    U(y,0) = F(y) = f(\e^{-y}).
+\end{equation}
+
+Aplicant la transformada de Fourier respecte~\(y\) trobem
+\[
+    (2\uppi\iu\xi)^{2}
+    \widehat{U(\xi,t)}
+    +
+    (1 - a)
+    (2\uppi\iu\xi)
+    \widehat{U(\xi,t)}
+    =
+    \frac{\partial U}{\partial t}
+    (\xi,t),
+\]
+que té per solució
+\[
+    \widehat{U}(\xi,t)
+    =
+    C(\xi)
+    \e^{(-4\uppi^{2}\xi^{2}+(1-a)2\uppi\iu\xi)t},
+\]
+i imposant~\eqref{ex3:eq1} tenim
+\[
+    \widehat{U}(\xi,t)
+    =
+    F(\xi)
+    \e^{(-4\uppi^{2}\xi^{2}+(1-a)2\uppi\iu\xi)t}.
+\]
+
 \begin{enumerate}
     \item[\textbf{4.}] Considereu l'equació~\(\Delta u=0\) a la banda
         \[
