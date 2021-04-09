@@ -475,6 +475,31 @@ i
     \end{enumerate}
 \end{enumerate}
 
+Tenim que
+\begin{align*}
+    \widehat{u}(\xi,y) &= \frac{\sinh(2\uppi(1-y)\xi)}{\sinh(2\uppi\xi)}
+                          \widehat{f}_{0}(\xi)
+                          +
+                          \frac{\sinh(2\uppi y\xi)}{\sinh(2\uppi\xi)}
+                          \widehat{f}_{1}(\xi) \\
+                       &= \widehat{\varphi}_{1-y}(\xi)
+                          \widehat{f}_{0}(\xi)
+                          +
+                          \widehat{\varphi}_{y}(\xi)
+                          \widehat{f}_{1}(\xi) \\
+                       &= \widehat{\varphi_{1-y}\ast f_{0}}(\xi)
+                          +
+                          \widehat{\varphi_{y}\ast f_{1}}(\xi),
+\end{align*}
+i aplicant la transformada de Fourier inversa trobem que
+\[
+    u(x,y)
+    =
+    \varphi_{1-y}\ast f_{0}
+    +
+    \varphi_{y}\ast f_{1}.
+\]
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(e)}] Finalment, un pot veure que la funció~\(u(x,y)\)
