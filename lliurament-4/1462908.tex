@@ -327,6 +327,57 @@ i desfent el canvi de variable obtenim la solució
         \end{enumerate}
 \end{enumerate}
 
+En aplicar la transformada de Fourier a l'equació~\(u_{xx}-u_{yy}=0\) obtenim
+\[
+    (2\uppi\iu\xi)^{2}\widehat{u}(\xi,y)
+    -
+    \widehat{u}_{yy}(\xi,y)
+    =
+    0,
+\]
+i trobem la solució
+\begin{equation}
+    \label{eq4:eq1}
+    \widehat{u}(\xi,y)
+    =
+    A(\xi)
+    \e^{2\uppi\xi y}
+    +
+    B(\xi)
+    \e^{-2\uppi\xi y},
+\end{equation}
+i de les restriccions~\(u(x,0)=f_{0}(x)\) i~\(u(x,1)=f_{1}(x)\) tenim
+\[
+    \widehat{u}(\xi,0) = \widehat{f}_{0}(\xi)
+    \qquad\text{i}\qquad
+    \widehat{u}(\xi,1) = \widehat{f}_{1}(\xi)
+\]
+i en imposar-les a~\eqref{eq4:eq1} trobem que
+\[
+    A(\xi) + B(\xi) = \widehat{f}_{0}(\xi)
+    \qquad\text{i}\qquad
+    A(\xi)\e^{2\uppi\xi} + B(\xi)\e^{-2\uppi\xi} = \widehat{f}_{1}(\xi),
+\]
+d'on deduïm
+\[
+    A(\xi) =
+    \frac{-\widehat{f}_{0}(\xi)\e^{2\uppi\xi}+\widehat{f}_{1}(\xi)}%
+    {2\sinh(2\uppi\xi)}
+    \qquad\text{i}\qquad
+    B(\xi) =
+    \frac{\widehat{f}_{0}(\xi)\e^{-2\uppi\xi}-\widehat{f}_{1}(\xi)}%
+    {2\sinh(2\uppi\xi)},
+\]
+i per tant
+\[
+    \widehat{u}(\xi,y) =
+    \frac{\sinh(2\uppi(1-y)\xi)}{\sinh(2\uppi\xi)}
+    \widehat{f}_{0}(\xi)
+    +
+    \frac{\sinh(2\uppi y\xi)}{\sinh(2\uppi\xi)}
+    \widehat{f}_{1}(\xi).
+\]
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Demostreu com a resultat que
