@@ -529,11 +529,16 @@ i aplicant la transformada de Fourier inversa trobem que
 
 Calculem
 \begin{align*}
-    \Delta u(x,y) &= \Delta\bigr(
-                        \varphi_{1-y}(x)\ast f_{0}(x,y)
-                        + \varphi_{y}(x)\ast f_{1}(x,y)
+    \Delta u(x,y) &= \Delta\bigl(
+                        \varphi_{1-y}(x)\conv f_{0}(x,y)
+                        + \varphi_{y}(x)\conv f_{1}(x,y)
                      \bigr) \\
-                  &=
+                  &= \Delta\bigl(\varphi_{1-y}(x)\conv f_{0}(x,y)\bigr)
+                     + \Delta\bigl(\varphi_{y}(x)\conv f_{1}(x,y)\bigr) \\
+                  &= \Delta\bigl(\varphi_{1-y}(x)\bigr)\conv f_{0}(x,y)
+                     + \Delta\bigl(\varphi_{y}(x)\bigr)\conv f_{1}(x,y) \\
+                  &= \varphi_{1-y}''(x)\conv f_{0}(x,y)
+                     + \varphi_{y}''(x)\conv f_{1}(x,y)
 \end{align*}
 
 \begin{enumerate}
