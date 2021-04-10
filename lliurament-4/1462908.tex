@@ -569,6 +569,42 @@ Calculem
         \end{enumerate}
 \end{enumerate}
 
+Observem que
+\[
+    \e^{-(x^{2}/2 - 2tx+t^{2})}
+    =
+    \e^{x^{2}/2}
+    \e^{-x^{2}-2tx-t^{2}}
+    =
+    \e^{x^{2}/2}
+    \e^{-(x-t)^{2}}
+\]
+i que
+\[
+    \e^{-(x-t)^{2}}
+    =
+    \sum_{k=0}^{\infty}
+    \biggl[
+        \frac{\diff}{\diff t^{k}}
+        \e^{-(x-t)^{2}}
+    \biggr]_{t=0}
+    \frac{t^{k}}{k!}
+    =
+    \sum_{k=0}^{\infty}
+    (-1)^{k}
+    \frac{\diff}{\diff x^{k}}
+    \e^{-x^{2}}
+    \frac{t^{k}}{k!},
+\]
+i aleshores
+\[
+    h_{k}(x)
+    =
+    (-1)^{k} \e^{x^{2}/2}
+    \frac{\diff^{k}}{\diff x^{k}}
+    \e^{-x^{2}}.
+\]
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Proveu que la família~\(\{h_{k}\}_{k=0}^{\infty}\)
