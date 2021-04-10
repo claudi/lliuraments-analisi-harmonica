@@ -256,7 +256,7 @@ Busquem solucions de la forma
 \[
     U(y,t)
     =
-    (F\ast K_{t})(y)
+    (F\conv K_{t})(y)
     \qquad\text{on}\qquad
     \widehat{K}_{t}(\xi)
     =
@@ -495,17 +495,17 @@ Tenim que
                           +
                           \widehat{\varphi}_{y}(\xi)
                           \widehat{f}_{1}(\xi) \\
-                       &= \widehat{\varphi_{1-y}\ast f_{0}}(\xi)
+                       &= \widehat{\varphi_{1-y}\conv f_{0}}(\xi)
                           +
-                          \widehat{\varphi_{y}\ast f_{1}}(\xi),
+                          \widehat{\varphi_{y}\conv f_{1}}(\xi),
 \end{align*}
 i aplicant la transformada de Fourier inversa trobem que
 \[
     u(x,y)
     =
-    \varphi_{1-y}(x)\ast f_{0}(x,y)
+    \varphi_{1-y}(x)\conv f_{0}(x,y)
     +
-    \varphi_{y}(x)\ast f_{1}(x,y).
+    \varphi_{y}(x)\conv f_{1}(x,y).
 \]
 
 \begin{definition}[Funció harmònica]
@@ -580,12 +580,12 @@ Calculem
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(c)}]
-            Definim~\(h^{\ast}_{k}(x)=h_{k}\bigl((2\uppi)^{1/2}x\bigr)\).
+            Definim~\(h^{\conv}_{k}(x)=h_{k}\bigl((2\uppi)^{1/2}x\bigr)\).
             Aleshores
             \[
-                \widehat{h^{\ast}_{k}}(\xi) = (-\iu)^{k}h_{k}^{\ast}(\xi).
+                \widehat{h^{\conv}_{k}}(\xi) = (-\iu)^{k}h_{k}^{\conv}(\xi).
             \]
-            Per tant, cada~\(h^{\ast}_{k}\) és una funció pròpia de la
+            Per tant, cada~\(h^{\conv}_{k}\) és una funció pròpia de la
             transformada de Fourier.
     \end{enumerate}
 \end{enumerate}
