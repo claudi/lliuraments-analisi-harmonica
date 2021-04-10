@@ -750,5 +750,41 @@ si~\(k\neq j\).
     \end{enumerate}
 \end{enumerate}
 
+Com~\(\langle h_{k}, h_{j}\rangle=0\) si~\(k\neq j\), tenim
+\begin{align*}
+    \frac{t^{k}}{k!}
+    \int_{-\infty}^{\infty}
+    [h_{k}(x)]^{2}
+    \diff x &= \int_{-\infty}^{\infty}
+               \e^{-(x^{2}/2-2tx+t^{2})}
+               h_{k}(x)
+               \diff x \\
+            &= \int_{-\infty}^{\infty}
+               \e^{-(x^{2}/2-2tx+t^{2})}
+               (-1)^{k}
+               \e^{x^{2}/2}
+               \frac{\diff^{k}}{\diff x^{k}}
+               \e^{-x^{2}}
+               \diff x \\
+            &= (-1)^{k}
+               \int_{-\infty}^{\infty}
+               \e^{2tx-t^{2}}
+               \frac{\diff^{k}}{\diff x^{k}}
+               \e^{-x^{2}}
+               \diff x \\
+            &= 2^{k}t^{k}
+               \int_{-\infty}^{\infty}
+               \e^{-(x-t)^{2}}
+               \diff x \\
+            &= 2^{k}t^{k}\sqrt{\uppi},
+\end{align*}
+i per tant
+\[
+    \int_{-\infty}^{\infty}
+    [h_{k}(x)]^{2}\diff x
+    =
+    \uppi^{1/2}2^{k}k!.
+\]
+
 \end{document}
 
