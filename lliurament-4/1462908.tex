@@ -643,6 +643,34 @@ que~\(f=0\).
     \end{enumerate}
 \end{enumerate}
 
+Observem que
+\[
+    \sum_{k=0}^{\infty}
+    h^{\ast}_{k}(x)
+    \frac{t^{k}}{k!}
+    =
+    \sum_{k=0}^{\infty}
+    h_{k}(\sqrt{2\uppi}x)
+    \frac{t^{k}}{k!}
+    =
+    \e^{-(\uppi x^{2}-2\sqrt{2\uppi}xt+t^{2})}.
+\]
+Per tant podem aplicar la transformada de Fourier per obtenir
+\[
+    \sum_{k=0}^{\infty}
+    \widehat{h^{\ast}_{k}}(\xi)
+    \frac{t^{k}}{k!}
+    =
+    \sum_{k=0}^{\infty}
+    (-1)^{k}
+    h^{\ast}_{k}(\xi)
+    \frac{t^{k}}{k!},
+\]
+d'on deduïm que ha de ser
+\[
+    \widehat{h^{\conv}_{k}}(\xi) = (-\iu)^{k}h_{k}^{\conv}(\xi).
+\]
+
 \begin{definition}[Operador d'Hermite]
     Per a qualsevol funció~\(f\) de la classe de Schwartz definim l'operador
     \[
