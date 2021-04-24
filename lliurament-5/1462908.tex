@@ -22,6 +22,7 @@
 \newcommand{\abs}[1]{\lvert{#1}\rvert}
 \newcommand{\Abs}[1]{\left\lvert{#1}\right\rvert}
 \newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Hk}{\mathcal{H}}
 
 \newcommand{\RR}{\mathbb{R}}
 
@@ -39,6 +40,46 @@
             \geq
             \frac{d^{2}}{16\uppi^{2}}.
         \]
+\end{enumerate}
+
+\begin{enumerate}
+    \item[\textbf{2.}] Considereu les equacions de calor a~\(\RR^{d}\) depenent
+        del temps:
+    \begin{equation}
+        \label{eq:ex2:heat}
+        \frac{\partial u}{\partial t}
+        =
+        \frac{\partial^{2}u}{\partial x_{1}^{2}}
+        + \dots +
+        \frac{\partial^{2}u}{\partial x_{d}^{2}},
+        \qquad
+        \text{on }
+        t>0,
+    \end{equation}
+    amb condició de frontera~\(u(x,0)=f(x)\in\Sc(\RR^{d})\).
+    Si
+    \[
+        \Hk_{t}^{(d)}
+        =
+        \frac{1}{(4\uppi t)^{d/2}}
+        \e^{-\abs{x}^{2}/4t}
+        =
+        \int_{\RR^{d}}
+        \e^{-4\uppi^{2}t\abs{\xi}^{2}}
+        \e^{2\uppi\iu x\diff\xi}
+        \diff\xi
+    \]
+    és el nucli de calor~\(d\)-dimensional, demostreu que la convolució
+    \[
+        u(x,t)
+        =
+        \bigl(f\ast\Hk_{t}^{(d)}\bigr)(x)
+    \]
+    és infinitament diferenciable quan~\(x\in\RR^{d}\) i~\(t>0\).
+
+    A més,~\(u\) és solució de~\eqref{eq:ex2:heat},
+    i és contínua fins a la frontera~\(t=0\),
+    i satisfà la condició~\(u(x,0)=f(x)\).
 \end{enumerate}
 
 \end{document}
