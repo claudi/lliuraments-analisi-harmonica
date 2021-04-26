@@ -82,5 +82,27 @@
     i satisfà la condició~\(u(x,0)=f(x)\).
 \end{enumerate}
 
+\begin{enumerate}
+    \item[\textbf{3.}] Per a cada~\((t,\theta)\) amb~\(t\in\RR\)
+        i~\(\abs{\theta}<\uppi\), sigui~\(L=L_{t,\theta}\) la línia en el
+        pla~\((x,y)\) determinada per
+        \[
+            x\cos(\theta) + y\sin(\theta) = t.
+        \]
+        Per~\(f\in\Sc(\RR^{d})\), la transformada de Radon dos dimensional
+        de~\(f\) es defineix com
+        \[
+            X(f)(t,\theta)
+            =
+            \int_{L_{t,\theta}}f
+            =
+            \int_{-\infty}^{\infty}
+            f(t\cos(\theta) + u\sin(\theta), t\sin(\theta) - u\cos(\theta))
+            \diff u
+        \]
+        Calculeu la transformada de Radon de la
+        funció~\(f(x,y)=\e^{-\uppi(x^{2}+y^{2})}\).
+\end{enumerate}
+
 \end{document}
 
