@@ -15,6 +15,9 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definició}
 
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+
 \newcommand{\iu}{\mathrm{i}}
 \newcommand{\e}{\mathrm{e}}
 \providecommand{\uppi}{\pi}
@@ -24,6 +27,9 @@
 \newcommand{\Sc}{\mathcal{S}}
 \newcommand{\Hk}{\mathcal{H}}
 \newcommand{\mlap}{-\Delta}
+\newcommand{\conjugat}[1]{\overline{#1}}
+\newcommand{\norm}[1]{\lVert{#1}\rVert}
+\newcommand{\Norm}[1]{\left\lVert{#1}\right\rVert}
 
 \newcommand{\RR}{\mathbb{R}}
 
@@ -42,6 +48,47 @@
             \frac{d^{2}}{16\uppi^{2}}.
         \]
 \end{enumerate}
+
+Si considerem l'equació
+\[
+    \sum_{i=1}^{n}
+    \frac{1}{2}
+    x_{i}
+    \frac{\partial}{\partial x_{i}}
+    \abs{\psi(x)}^{2}
+    =
+    \Re\bigl(
+        \nabla\psi\cdot\conjugat{x\psi(x)}
+    \bigr)
+\]
+integrant sobre~\(\RR^{d}\) obtenim
+\begin{align*}
+    \frac{d}{2}
+    \norm{\psi}_{2}^{2} &= \Re\biggl(
+                           \int_{\RR^{d}}
+                           \nabla\psi(x)\cdot\conjugat{x\psi(x)}
+                           \diff x
+                           \biggr) \\
+                        &\leq \norm{\nabla\psi}_{2}
+                           \norm{x\psi}_{2} \\
+                        &= 2\uppi
+                           \norm{\xi\widehat{\psi}}_{2}
+                           \norm{x\psi}_{2},
+\end{align*}
+i tenim que
+\[
+    \norm{\xi\widehat{\psi}}_{2}
+    \norm{x\psi}_{2}
+    \geq
+    \frac{d}{4\uppi}
+\]
+d'on deduïm
+\[
+    \biggl(\int_{\RR^{d}}\abs{x}^{2}\abs{\psi(x)}^{2}\diff x\biggr)
+    \biggl(\int_{\RR^{d}}\abs{\xi}^{2}\abs{\widehat{\psi}(\xi)}^{2}\diff\xi\biggr)
+    \geq
+    \frac{d^{2}}{16\uppi^{2}}.
+\]
 
 \begin{enumerate}
     \item[\textbf{2.}] Considereu les equacions de calor a~\(\RR^{d}\) depenent
