@@ -17,6 +17,7 @@
 
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator{\X}{X}
 
 \newcommand{\iu}{\mathrm{i}}
 \newcommand{\e}{\mathrm{e}}
@@ -166,6 +167,26 @@ i~\(t>0\), tenim que~\(u(x,t)\) també ho és.
         Calculeu la transformada de Radon de la
         funció~\(f(x,y)=\e^{-\uppi(x^{2}+y^{2})}\).
 \end{enumerate}
+
+Calculem
+\begin{align*}
+    \X(f)(t,\theta) &= \int_{-\infty}^{\infty}
+                       \e^{-\uppi
+                           (t\cos(\theta) + u\sin(\theta))^{2}
+                           +
+                           (t\sin(\theta) - u\cos(\theta))^{2}}
+                       \diff u \\
+                    &= \int_{-\infty}^{\infty}
+                       \e^{-\uppi
+                           (t^{2}\cos^{2}(\theta) + u^{2}\sin^{2}(\theta)
+                           +
+                           t^{2}\sin^{2}(\theta) + u^{2}\cos^{2}(\theta))}
+                       \diff u \\
+                    &= \int_{-\infty}^{\infty}
+                       \e^{-\uppi(t^{2} + u^{2})}
+                       \diff u \\
+                    &= \e^{-\uppi t^{2}}
+\end{align*}
 
 \begin{enumerate}
     \item[\textbf{4.}] Sigui~\(X\) la transformada de Radon. Demostreu que
