@@ -23,6 +23,7 @@
 \newcommand{\Abs}[1]{\left\lvert{#1}\right\rvert}
 
 \newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
 
 \title{Sisè lliurament}
 \author{Claudi Lleyda Moltó -- 1462908}
@@ -33,6 +34,53 @@
     \item[\textbf{1.}] Si~\(f\) és una funció~\(\mathcal{C}^{1}\) sobre el
         cercle, demostreu que~\(\abs{a_{N}(n)}\leq c/\abs{n}\)
         quan~\(0<\abs{n}\leq N/2\).
+\end{enumerate}
+
+\begin{enumerate}
+    \item[\textbf{2.}] Suposeu
+        que~\(\displaystyle P(x)=\sum_{n=1}^{N}a_{n}\e^{2\uppi\iu nx}\).
+        \begin{enumerate}
+            \item[\textbf{(a)}] Demostreu utilitzant les identitats de Parseval
+                al cercle i~\(\ZZ(N)\), que
+                \[
+                    \int_{0}^{1}
+                    \abs{P(x)}^{2}
+                    \diff x
+                    =
+                    \frac{1}{N}
+                    \sum_{j=1}^{N}
+                    \abs{P(j/N)}^{2}.
+                \]
+        \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item[]\begin{enumerate}
+            \item[\textbf{(b)}] Demostreu la fórmula de reconstrucció
+                \[
+                    P(x)
+                    =
+                    \sum_{j=1}^{N}
+                    P(j/N)
+                    K\bigl(x-(j/N)\bigr)
+                \]
+                on
+                \[
+                    K(x)
+                    =
+                    \frac{\e^{2\uppi\iu x}}{N}
+                    \frac{1-\e^{2\uppi\iu Nx}}{1-\e^{2\uppi\iu x}}
+                    =
+                    \frac{1}{N}
+                    \bigl(
+                        e^{2\uppi\iu x}
+                        +
+                        \e^{2\uppi\iu2x}
+                        + \cdots +
+                        \e^{2\uppi\iu Nx}
+                    \bigr).
+                \]
+        \end{enumerate}
 \end{enumerate}
 \end{document}
 
