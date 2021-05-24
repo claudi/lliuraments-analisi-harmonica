@@ -419,6 +419,8 @@ Tenim que
     = P(x).
 \end{align*}
 
+\clearpage
+
 \begin{enumerate}
     \item[\textbf{3.}] Demostreu les següents afirmacions:
         \begin{enumerate}
@@ -428,12 +430,72 @@ Tenim que
         \end{enumerate}
 \end{enumerate}
 
+El cas~\(\textbf{(a)}\) és un cas particular del~\(\textbf{(b)}\),
+així que només demostrarem el segon.
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Generalitzeu aquest fet per~\(N=\alpha^{n}\)
             on~\(\alpha\) és un enter més gran que~\(1\).
     \end{enumerate}
 \end{enumerate}
+
+Definim~\(w_{N} = \e^{-2\uppi\iu/N}\) i~\(\#(M)\) com el mínim nombre d'operacions
+necessàries per calcular tots els coeficients de Fourier d'una funció
+a~\(\ZZ(M)\).
+
+Veiem primer que
+\begin{equation}
+    \label{ex3:eq1}
+    \#(\alpha M)
+    \leq
+    \alpha\#(M)
+    +
+    2M\alpha^{2}.
+\end{equation}
+
+Calcular~\(w_{\alpha M},\dots,w_{\alpha M}^{\alpha M}\) requereix com a
+màxim~\(\alpha M\) operacions.
+En particular, tenim que~\(w_{M} = \e^{-2\uppi\iu/M} = w_{\alpha M}^{\alpha}\).
+
+La idea de la demostració és que per qualsevol funció~\(F\) de~\(\ZZ(\alpha M)\)
+considerem les funcions de~\(\ZZ(M)\) definides per
+\[
+    F_{j}(n) = F(\alpha n + j),
+\]
+on~\(0 \leq j \leq \alpha-1\).
+
+Tenint en compte que es poden calcular els coeficients de Fourier de~\(F_{j}\)
+en màxim~\(\#(M)\) operacions, aleshores
+\[
+    a_{k}^{\alpha M}(F)
+    =
+    \frac{1}{\alpha}
+    \bigl(
+        a_{k}^{M}(F)
+        +
+        a_{n}^{M}(F_{1})
+        w_{\alpha M}^{k}
+        + \cdots +
+        a_{k}^{M}(F_{\alpha-1})
+    w_{\alpha M}^{(\alpha-1)k}
+    \bigr).
+\]
+
+Una vegada coneixem~\(a_{k}^{M}(F_{j})\) per~\(j=0,\dots,\alpha-1\)
+i~\(w_{\alpha M}^{k}\), veiem que a cada~\(a_{k}^{\alpha M}(F)\) es pot calcular
+amb menys de~\(2\alpha-1\) operacions.
+
+Per tant
+\begin{align*}
+    \#(\alpha M)
+    &\leq
+    \alpha M + \alpha \#(M) + (2\alpha - 1)\alpha M \\
+    &\leq \alpha \#(M) + 2M\alpha^{2}.
+\end{align*}
+com volíem veure.
+
+Podem veure el resultat original fent inducció sobre~\(n\).
 
 \begin{enumerate}
     \item[\textbf{4.}] Escriviu les taules de multiplicació dels
