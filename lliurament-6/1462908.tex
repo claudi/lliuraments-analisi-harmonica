@@ -36,6 +36,155 @@
         quan~\(0<\abs{n}\leq N/2\).
 \end{enumerate}
 
+Sigui~\(l\in\ZZ\setminus\{0\}\) tenim que
+\begin{align*}
+    a_{N}(n)
+    \bigl(
+        1 - \e^{2\uppi\iu ln/N}
+    \bigr)
+    &=
+    \bigl(
+        1 - \e^{2\uppi\iu ln/N}
+    \bigr)
+    \frac{1}{N}
+    \sum_{k=1}^{N}
+    f\bigl(
+        \e^{2\uppi\iu k/N}
+    \bigr)
+    \e^{-2\uppi\iu kn/N} \\
+    &=
+    \frac{1}{N}
+    \sum_{k=1}^{N}
+    f\bigl(
+        \e^{2\uppi\iu k/N}
+    \bigr)
+    \e^{-2\uppi\iu kn/N}
+    -
+    \frac{1}{N}
+    \sum_{k=1}^{N}
+    f\bigl(
+        \e^{2\uppi\iu k/N}
+    \bigr)
+    \e^{2\uppi\iu\frac{l-k}{N}n},
+\end{align*}
+i prenent~\(-t=l-k\), trobem
+\[
+    a_{N}(n)
+    =
+    \frac{1}{N}
+    \sum_{k=1}^{N}
+    f\bigl(
+        \e^{2\uppi\iu k/N}
+    \bigr)
+    \e^{-2\uppi\iu kn/N}
+    -
+    \frac{1}{N}
+    \sum_{t=1-l}^{N-l}
+    f\bigl(
+        \e^{2\uppi\iu(l+t)/N}
+    \bigr)
+    \e^{2\uppi\iu tn/N}.
+\]
+
+Ara bé, la funció exponencial és~\(1\)-periòdica, així que també serà~\(l\)
+periòdica, i per tant
+\[
+    a_{N}(n)
+    \bigl(
+        1 - \e^{2\uppi\iu ln/N}
+    \bigr)
+    =
+    \frac{1}{N}
+    \sum_{k=1}^{N}
+    \Bigl(
+        f\bigl(
+            \e^{2\uppi\iu k/N}
+        \bigr)
+        -
+        f\bigl(
+            \e^{2\uppi\iu(k+l)/N}
+        \bigr)
+    \Bigr)
+    \e^{-2\uppi\iu kn/N}.
+\]
+
+Si prenem valors absoluts tenim, per la condició de Lipschitz,
+\begin{align*}
+    \abs{a_{N}(n)}
+    \Abs{1-\e^{2\uppi\iu ln/N}}
+    &=
+    \frac{1}{N}
+    \Abs{
+        \sum_{k=1}^{N}
+        \Bigl(
+            f\bigl(
+                \e^{2\uppi\iu k/N}
+            \bigr)
+            -
+            f\bigl(
+                \e^{2\uppi\iu(k+l)/N}
+            \bigr)
+        \Bigr)
+        \e^{-2\uppi\iu kn/N}
+    } \\
+    &\leq
+    \frac{1}{N}
+    \Abs{
+        \sum_{k=1}^{N}
+        \Bigl(
+            f\bigl(
+                \e^{2\uppi\iu k/N}
+            \bigr)
+            -
+            f\bigl(
+                \e^{2\uppi\iu(k+l)/N}
+            \bigr)
+        \Bigr)
+    }
+    \Abs{
+        \e^{-2\uppi\iu kn/N}
+    } \\
+    &\leq
+    \frac{M}{N}
+    \Abs{
+        \sum_{k=1}^{N}
+        \Bigl(
+            \e^{2\uppi\iu k/N}
+            -
+            \e^{2\uppi\iu(k+l)/N}
+        \Bigr)
+    } \\
+    &=
+    \frac{M}{N}
+    \sum_{k=1}^{N}
+    \Abs{\e^{2\uppi\iu k/N}}
+    \Abs{1-\e^{2\uppi\iu l/N}} \\
+    &=
+    \frac{MN}{N}
+    \Abs{\e^{2\uppi\iu k/N}},
+\end{align*}
+per a certa~\(M\),
+i per tant
+\[
+    \abs{a_{N}(n)}
+    \leq
+    M
+    \frac{\abs{1-\e^{2\uppi\iu l/N}}}{\abs{1-\e^{2\uppi\iu ln/N}}}.
+\]
+
+Si triem~\(l\) tal que
+\[
+    \Abs{l-\frac{N}{2n}}
+    \leq
+    \frac{1}{2}
+\]
+tindrem
+\[
+    \Abs{\frac{ln}{N} - \frac{1}{2}}
+    \leq
+    \frac{\abs{n}}{2N}
+\]
+
 \begin{enumerate}
     \item[\textbf{2.}] Suposeu
         que~\(\displaystyle P(x)=\sum_{n=1}^{N}a_{n}\e^{2\uppi\iu nx}\).
