@@ -245,6 +245,74 @@ on~\(c=3M\uppi/\sqrt{2}\).
         \end{enumerate}
 \end{enumerate}
 
+Tenim que
+\begin{align*}
+    \int_{0}^{1}
+    \abs{P(x)}^{2}
+    \diff x
+    &=
+    \int_{0}^{1}
+    \Abs{
+        \sum_{n=1}^{N}
+        a_{n}\e^{2\uppi\iu nx}
+    }^{2}
+    \diff x \\
+    &=
+    \sum_{n=1}^{N}
+    \int_{0}^{1}
+    \abs{a_{n}}^{2}
+    \Abs{
+        \e^{2\uppi\iu nx}
+    }^{2}
+    \diff x \\
+    &=
+    \sum_{n=1}^{N}
+    \int_{0}^{1}
+    \abs{a_{n}}^{2}
+    \diff x \\
+    &=
+    \sum_{n=1}^{N}
+    \abs{a_{n}}^{2}.
+\end{align*}
+
+Considerem ara l'aplicació
+\[
+    Q(\xi_{j}) = P(j/N),
+    \qquad
+    \text{on}
+    \quad
+    \xi_{j} = \e^{2\uppi j/N}.
+\]
+Aleshores
+\[
+    Q(\xi_{j})
+    =
+    P(j/N)
+    =
+    \sum_{n=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu nj/N}
+    =
+    \sum_{n=1}^{N}
+    a_{n}
+    e_{n}(\xi_{j}),
+\]
+i obtenim
+\[
+    \widehat{Q}(\xi_{k}) = a_{k},
+\]
+i per la identitat de Parseval
+\[
+    \sum_{k=1}^{N}
+    \abs{\widehat{Q}(\xi_{k})}^{2}
+    =
+    \frac{1}{N}
+    \sum_{j=1}^{N}
+    \abs{P(j/N)}^{2}
+    =
+    \sum_{k=1}^{N}\abs{a_{k}}^{2}.
+\]
+
 \begin{enumerate}
     \item[]\begin{enumerate}
         \item[\textbf{(b)}] Demostreu la fórmula de reconstrucció
