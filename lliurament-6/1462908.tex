@@ -21,6 +21,7 @@
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\abs}[1]{\lvert{#1}\rvert}
 \newcommand{\Abs}[1]{\left\lvert{#1}\right\rvert}
+\newcommand{\conjugat}[1]{\overline{#1}}
 
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -227,6 +228,8 @@ i per tant
 \]
 on~\(c=3M\uppi/\sqrt{2}\).
 
+\clearpage
+
 \begin{enumerate}
     \item[\textbf{2.}] Suposeu
         que~\(\displaystyle P(x)=\sum_{n=1}^{N}a_{n}\e^{2\uppi\iu nx}\).
@@ -341,6 +344,80 @@ i per la identitat de Parseval
             \]
     \end{enumerate}
 \end{enumerate}
+
+Tenim que
+\begin{align*}
+    \sum_{j=1}^{N}
+    P(j/N)
+    K\bigl(x-(j/N)\bigr)
+    &=
+    \sum_{j=1}^{N}
+    \Biggl(
+        \sum_{n=1}^{N}
+        a_{n}\e^{2\uppi\iu nj/N}
+    \Biggr)
+    \Biggl(
+        \frac{1}{N}
+        \sum_{k=1}^{N}
+        \e^{2\uppi\iu k(x-(j/N))}
+    \Biggr) \\
+    &=
+    \sum_{j=1}^{N}
+    \Biggl(
+        \Biggl(
+            \sum_{n=1}^{N}
+            a_{n}
+            \e^{2\uppi\iu nj/N}
+        \Biggr)
+        \Biggl(
+            \frac{1}{N}
+            \sum_{k=1}^{N}
+            \e^{2\uppi\iu x}\e^{-2\uppi\iu kj/N}
+        \Biggr)
+    \Biggr) \\
+    &=
+    \frac{1}{N}
+    \sum_{j=1}^{N}
+    \sum_{n=1}^{N}
+    \sum_{k=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu kx}
+    \e^{2\uppi\iu(n-k)j/N} \\
+    &=
+    \frac{1}{N}
+    \sum_{n=1}^{N}
+    \sum_{k=1}^{N}
+    a_{n}\e^{2\uppi kx}
+    \sum_{j=1}^{N}
+    \e^{2\uppi\iu(n-k)j/N} \\
+    &=
+    \frac{1}{N}
+    \sum_{n=1}^{N}
+    \sum_{k=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu kx}
+    \sum_{j=1}^{N}
+    e_{n}(\xi_{j})
+    \conjugat{e_{k}(\xi_{j})} \\
+    &=
+    \frac{1}{N}
+    \sum_{n=1}^{N}
+    \sum_{k=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu kx}
+    \langle e_{n},e_{k}\rangle \\
+    &=
+    \frac{1}{N}
+    \sum_{n=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu kx}
+    N \\
+    &=
+    \sum_{n=1}^{N}
+    a_{n}
+    \e^{2\uppi\iu nx}
+    = P(x).
+\end{align*}
 
 \begin{enumerate}
     \item[\textbf{3.}] Demostreu les següents afirmacions:
