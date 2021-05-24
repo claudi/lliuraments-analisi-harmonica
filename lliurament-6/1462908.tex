@@ -182,8 +182,50 @@ tindrem
 \[
     \Abs{\frac{ln}{N} - \frac{1}{2}}
     \leq
-    \frac{\abs{n}}{2N}
+    \frac{\abs{n}}{2N},
 \]
+d'on deduïm
+\[
+    \Abs{\frac{ln}{N} - \frac{1}{2}}
+    \leq
+    \frac{N/2}{2N}
+    =
+    \frac{1}{4},
+\]
+i per tant
+\[
+    \frac{1}{4}
+    \leq
+    \frac{ln}{N}
+    \leq
+    \frac{3}{4}.
+\]
+
+Acotem~\(a_{N}(n)\). Tenim que
+\begin{align*}
+    \Abs{1-\e^{2\uppi\iu l/N}}
+    &\leq \abs{2\uppi\iu l/N} \\
+    &\leq 2\uppi\Abs{\frac{1}{N}}\Abs{\frac{1}{2} + \frac{N}{2\uppi\iu}} \\
+    &\leq 2\uppi\biggl(
+        \frac{1}{2N} + \frac{1}{2\abs{n}}
+    \biggr) \\
+    &\leq 2\uppi\biggl(
+        \frac{2}{2\abs{n}} + \frac{1}{2\abs{n}}
+    \biggr) \\
+    &= \frac{3\uppi}{\abs{n}}
+\end{align*}
+i
+\begin{align*}
+    \Abs{1-\e^{2\uppi\iu ln/N}}
+    &\geq \Abs{1-\e^{2\uppi\iu 3/4}} \\
+    &= \Abs{1-\e^{3\uppi\iu/2}} \\
+    &= \abs{1+\iu} = \sqrt{2},
+\end{align*}
+i per tant
+\[
+    \abs{a_{N}(n)} \leq \frac{3M\uppi}{\sqrt{2}\abs{n}} = \frac{c}{\abs{n}},
+\]
+on~\(c=3M\uppi/\sqrt{2}\).
 
 \begin{enumerate}
     \item[\textbf{2.}] Suposeu
@@ -205,31 +247,31 @@ tindrem
 
 \begin{enumerate}
     \item[]\begin{enumerate}
-            \item[\textbf{(b)}] Demostreu la fórmula de reconstrucció
-                \[
-                    P(x)
-                    =
-                    \sum_{j=1}^{N}
-                    P(j/N)
-                    K\bigl(x-(j/N)\bigr)
-                \]
-                on
-                \[
-                    K(x)
-                    =
-                    \frac{\e^{2\uppi\iu x}}{N}
-                    \frac{1-\e^{2\uppi\iu Nx}}{1-\e^{2\uppi\iu x}}
-                    =
-                    \frac{1}{N}
-                    \bigl(
-                        e^{2\uppi\iu x}
-                        +
-                        \e^{2\uppi\iu2x}
-                        + \cdots +
-                        \e^{2\uppi\iu Nx}
-                    \bigr).
-                \]
-        \end{enumerate}
+        \item[\textbf{(b)}] Demostreu la fórmula de reconstrucció
+            \[
+                P(x)
+                =
+                \sum_{j=1}^{N}
+                P(j/N)
+                K\bigl(x-(j/N)\bigr)
+            \]
+            on
+            \[
+                K(x)
+                =
+                \frac{\e^{2\uppi\iu x}}{N}
+                \frac{1-\e^{2\uppi\iu Nx}}{1-\e^{2\uppi\iu x}}
+                =
+                \frac{1}{N}
+                \bigl(
+                    e^{2\uppi\iu x}
+                    +
+                    \e^{2\uppi\iu2x}
+                    + \cdots +
+                    \e^{2\uppi\iu Nx}
+                \bigr).
+            \]
+    \end{enumerate}
 \end{enumerate}
 
 \begin{enumerate}
